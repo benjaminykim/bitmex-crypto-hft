@@ -1,0 +1,3 @@
+[submodule "api-connectors"]
+	path = api-connectors
+	url = https://github.com/BitMEX/api-connectors.git
