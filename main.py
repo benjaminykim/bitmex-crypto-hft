@@ -1,14 +1,16 @@
 from bitmex_websocket import BitMEXWebsocket
 import logging
 from time import sleep
+import keystore
 
 # Basic use of websocket.
+
 def run():
     logger = setup_logger()
 
     # Instantiating the WS will make it connect. Be sure to add your api_key/api_secret.
     ws = BitMEXWebsocket(endpoint="https://testnet.bitmex.com/api/v1", symbol="XBTUSD",
-                         api_key=None, api_secret=None)
+                         api_key=keystore.KEY, api_secret=keystore.SECRET)
 
     logger.info("Instrument data: %s" % ws.get_instrument())
 

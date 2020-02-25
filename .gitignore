@@ -1,1 +1,2 @@
-*.keystore
+*keystore*
+__pycache__
